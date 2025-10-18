@@ -1,123 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jeux</title> 
-
-<meta name="description" content="Découvrez une sélection de jeux éducatifs et scientifiques pour apprendre en s'amusant. Jeux en ligne gratuits pour enfants, étudiants et passionnés de science.">
-<meta name="keywords" content="jeux éducatifs, jeux scientifiques, apprentissage, jeux en ligne, science, éducation, enfants, étudiants">
-<meta name="author" content="Jeux Éducatif">
-<meta name="robots" content="index, follow">
-  
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mes projets — Menu</title>
+  <meta name="description" content="Menu centralisé de mes mini-projets (maths, physique, jeux, outils) publiés sur GitHub Pages." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Ccircle cx='64' cy='64' r='60' fill='%230b0f14'/%3E%3Cpath d='M32 68l20 20 44-44' stroke='%2371dca0' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <meta property="og:title" content="Mes projets — Menu" />
+  <meta property="og:description" content="Menu centralisé de mes mini-projets (maths, physique, jeux, outils)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://absabefi-cell.github.io/" />
+  <meta name="theme-color" content="#0b0f14" />
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f7f9fb;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+    :root{
+      --bg:#0b0f14;--panel:#111726;--ink:#eef5ff;--muted:#9bb0c7;--accent:#50a8ff;--accent2:#71dca0;--card:#0f1422;--ring:#1f2a3a;
     }
-
-    header {
-      background: #1f2937;
-      color: white;
-      padding: 40px 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.2em;
-    }
-
-    p {
-      color: #d1d5db;
-      font-size: 1.1em;
-    }
-
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 25px;
-      width: 260px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-    }
-
-    .emoji {
-      font-size: 2.5em;
-    }
-
-    a {
-      text-decoration: none;
-      color: #2563eb;
-      font-weight: bold;
-      display: block;
-      margin-top: 10px;
-    }
-
-    footer {
-      background: #111827;
-      color: #9ca3af;
-      padding: 20px;
-      font-size: 0.9em;
-    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:5;background:linear-gradient(180deg, rgba(11,15,20,.95), rgba(11,15,20,.75));backdrop-filter:blur(8px);border-bottom:1px solid var(--ring)}
+    header .bar{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:14px 0}
+    .title{font-size:clamp(20px,3vw,28px);font-weight:700;letter-spacing:.3px}
+    .search{display:flex;gap:10px;align-items:center;width:100%;max-width:620px;background:var(--card);border:1px solid var(--ring);border-radius:14px;padding:8px 12px}
+    .search input{flex:1;background:transparent;border:0;outline:none;color:var(--ink);font-size:15px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 0}
+    .chip{font-size:13px;padding:6px 10px;border:1px solid var(--ring);border-radius:999px;opacity:.9;cursor:pointer;user-select:none}
+    .chip[data-active="true"]{background:var(--accent2);color:#072012;border-color:transparent}
+    main{padding:20px 0}
+    .grid{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:14px}
+    @media(min-width:620px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(min-width:980px){.grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+    .card{position:relative;display:flex;flex-direction:column;gap:10px;background:var(--card);border:1px solid var(--ring);border-radius:18px;padding:14px;transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+    .card:hover{transform:translateY(-2px);border-color:var(--accent)}
+    .badge{position:absolute;top:10px;right:10px;font-size:11px;padding:4px 8px;border:1px solid var(--ring);border-radius:999px;opacity:.85}
+    .thumb{width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--ring);background:#0c1220;display:flex;align-items:center;justify-content:center}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .card h3{margin:0;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px;line-height:1.35}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+    .meta span{font-size:12px;padding:4px 8px;border:1px dashed var(--ring);border-radius:8px;color:var(--muted)}
+    .go{margin-top:10px;display:inline-flex;gap:8px;align-items:center;font-weight:600;color:var(--accent)}
+    footer{border-top:1px solid var(--ring);opacity:.9}
+    .foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:16px 0;color:var(--muted);font-size:13px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Portfolio de mini-projets",
+    "itemListElement": [
+      {"@type":"SiteNavigationElement","position":1,"name":"Horloge maison","url":"https://absabefi-cell.github.io/Horloge-maison/"},
+      {"@type":"SiteNavigationElement","position":2,"name":"Portance aile","url":"https://absabefi-cell.github.io/Portance-aile-/"},
+      {"@type":"SiteNavigationElement","position":3,"name":"Traceur courbe 3D","url":"https://absabefi-cell.github.io/Traceur-courbe-3D/"},
+      {"@type":"SiteNavigationElement","position":4,"name":"INTEGRALE","url":"https://absabefi-cell.github.io/INTEGRALE/"},
+      {"@type":"SiteNavigationElement","position":5,"name":"Simulateur de choc","url":"https://absabefi-cell.github.io/Simulateur-de-choc/"},
+      {"@type":"SiteNavigationElement","position":6,"name":"Calculatrice en ligne","url":"https://absabefi-cell.github.io/Calculatrice-en-ligne/"},
+      {"@type":"SiteNavigationElement","position":7,"name":"Terre–Lune–Soleil (marées)","url":"https://absabefi-cell.github.io/Terre-lune-soleil-marres/"},
+      {"@type":"SiteNavigationElement","position":8,"name":"Jeux animaux","url":"https://absabefi-cell.github.io/Jeux-animeaux/"},
+      {"@type":"SiteNavigationElement","position":9,"name":"Puzzle pour enfant","url":"https://absabefi-cell.github.io/Puzzle-pour-enfant/"},
+      {"@type":"SiteNavigationElement","position":10,"name":"Jeux de boules v2","url":"https://absabefi-cell.github.io/Jeuxboulesv2/"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
-    <h1>🚀 Mes projets GitHub actifs</h1>
-    <p>Bienvenue sur le portfolio <strong>absabefi-cell</strong></p>
-  </header>
-
-  <section class="projects">
-    <div class="card">
-      <div class="emoji">🐱</div>
-      <h3>Images Chat</h3>
-      <a href="https://absabefi-cell.github.io/Images-chat/" target="_blank">Voir le projet</a>
+    <div class="wrap bar">
+      <div class="title">🚀 Mes projets</div>
+      <form class="search" role="search" onsubmit="event.preventDefault()">
+        <span aria-hidden="true">🔎</span>
+        <label for="q" class="sr-only">Rechercher</label>
+        <input id="q" name="q" placeholder="Rechercher un projet (ex: jeux, maths, physique)" autocomplete="off" />
+      </form>
     </div>
-
-    <div class="card">
-      <div class="emoji">⚽</div>
-      <h3>Jeu des Boules V2</h3>
-      <a href="https://absabefi-cell.github.io/Jeuxboulesv2/" target="_blank">Voir le projet</a>
+    <div class="wrap">
+      <div class="chips" id="chips"></div>
     </div>
-
-    <div class="card">
-      <div class="emoji">🦁</div>
-      <h3>Jeu des Animaux</h3>
-      <a href="https://absabefi-cell.github.io/Jeux-animeaux/" target="_blank">Voir le projet</a>
+  </header>  <main class="wrap">
+    <section class="grid" id="grid" aria-live="polite"></section>
+  </main>  <footer>
+    <div class="wrap foot">
+      <span>© <span id="y"></span> — absabefi-cell</span>
+      <span>Astuce: tape un mot-clé (ex. « jeux ») pour filtrer.</span>
     </div>
+  </footer>  <script>
+  // --- util: fabrique de vignettes SVG data:uri (emoji + couleur) ---
+  function svgThumb(emoji, bg){
+    const svg = encodeURIComponent(`<?xml version='1.0' encoding='UTF-8'?>\n<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='675' viewBox='0 0 1200 675'>\n  <defs>\n    <linearGradient id='g' x1='0' x2='1' y1='0' y2='1'>\n      <stop offset='0' stop-color='${bg}'/>\n      <stop offset='1' stop-color='#0b0f14'/>\n    </linearGradient>\n  </defs>\n  <rect width='1200' height='675' fill='url(#g)'/>\n  <text x='50%' y='52%' font-size='300' text-anchor='middle' dominant-baseline='middle'>${emoji}</text>\n</svg>`);
+    return `data:image/svg+xml;charset=utf-8,${svg}`;
+  }
 
-    <div class="card">
-      <div class="emoji">📈</div>
-      <h3>Traceur de Courbe 3D</h3>
-      <a href="https://absabefi-cell.github.io/Traceur-courbe-3D/" target="_blank">Voir le projet</a>
-    </div>
+  const projects = [
+    {title:'Horloge maison', url:'https://absabefi-cell.github.io/Horloge-maison/', desc:"Horloge plein écran avec sonnerie.", icon:'⏰', thumb: svgThumb('⏰','#224ece'), tags:['outils']},
+    {title:'Portance aile', url:'https://absabefi-cell.github.io/Portance-aile-/', desc:"Mini simulateur de portance (profil, vitesse, etc.).", icon:'🛩️', thumb: svgThumb('🛩️','#0aa37f'), tags:['physique','aero']},
+    {title:'Traceur courbe 3D', url:'https://absabefi-cell.github.io/Traceur-courbe-3D/', desc:"Tracer des courbes paramétriques en 3D.", icon:'🧭', thumb: svgThumb('🧭','#7a49ff'), tags:['maths','3d','outils']},
+    {title:'INTEGRALE', url:'https://absabefi-cell.github.io/INTEGRALE/', desc:"Visualisation d’une intégrale avec rectangles de Riemann.", icon:'∫', thumb: svgThumb('∫','#e07a19'), tags:['maths','code']},
+    {title:'Simulateur de choc', url:'https://absabefi-cell.github.io/Simulateur-de-choc/', desc:"Collisions & énergie — petit simulateur.", icon:'💥', thumb: svgThumb('💥','#b21f5b'), tags:['physique','jeux']},
+    {title:'Calculatrice en ligne', url:'https://absabefi-cell.github.io/Calculatrice-en-ligne/', desc:"Calculatrice simple et rapide.", icon:'🧮', thumb: svgThumb('🧮','#3a7c2a'), tags:['outils','maths']},
+    {title:'Terre–Lune–Soleil (marées)', url:'https://absabefi-cell.github.io/Terre-lune-soleil-marres/', desc:"Schéma animé Terre–Lune–Soleil.", icon:'🌍', thumb: svgThumb('🌍','#1b587a'), tags:['physique','astronomie']},
+    {title:'Jeux animaux', url:'https://absabefi-cell.github.io/Jeux-animeaux/', desc:"Jeu éducatif sur les animaux.", icon:'🐾', thumb: svgThumb('🐾','#8e5cff'), tags:['jeux','kids']},
+    {title:'Puzzle pour enfant', url:'https://absabefi-cell.github.io/Puzzle-pour-enfant/', desc:"Puzzle glisser-déposer pour enfants.", icon:'🧩', thumb: svgThumb('🧩','#c35100'), tags:['jeux','kids']},
+    {title:'Jeux de boules v2', url:'https://absabefi-cell.github.io/Jeuxboulesv2/', desc:"Billes qui rebondissent (v2).", icon:'⚪', thumb: svgThumb('⚪','#005a8e'), tags:['jeux','physique']},
+  ];
 
-    <div class="card">
-      <div class="emoji">🧮</div>
-      <h3>Calculatrice en Ligne</h3>
-      <a href="https://absabefi-cell.github.io/Calculatrice-en-ligne/" target="_blank">Voir le code</a>
-    </div>
-  </section>
+  const TAGS = ['tous','jeux','maths','physique','outils','kids','aero','3d','astronomie','code'];
 
-  <footer>
-    © 2025 absabefi-cell — Tous droits réservés
-  </footer>
-</body>
-  </html>
+  const grid = document.getElementById('grid');
+  const q = document.getElementById('q');
+  const chips = document.getElementById('chips');
+  const year = document.getElementById('y');
+  year.textContent = new Date().getFullYear();
+
+  let state = {query:'', tag:'tous'};
+
+  function renderChips(){
+    chips.innerHTML = '';
+    TAGS.forEach(t => {
+      const b = document.createElement('button');
+      b.className = 'chip';
+      b.type = 'button';
+      b.textContent = t;
+      b.dataset.tag = t;
+      b.setAttribute('aria-pressed', state.tag===t ? 'true' : 'false');
+      b.dataset.active = state.tag===t;
+      b.onclick = () => { state.tag = t; render(); };
+      chips.appendChild(b);
+    });
+  }
+
+  function matches(p){
+    const text = (p.title + ' ' + p.desc + ' ' + p.tags.join(' ')).toLowerCase();
+    const queryOk = !state.query || text.includes(state.query);
+    const tagOk = state.tag==='tous' || p.tags.includes(state.tag);
+    return queryOk && tagOk;
+  }
+
+  function card(p, i){
+    const el = document.createElement('a');
+    el.className = 'card';
+    el.href = p.url;
+    el.target = '_blank';
+    el.rel = 'noopener';
+    el.innerHTML = `
+      <div class="badge">#${i+1}</div>
+      <div class="thumb">${p.thumb ? `<img src="${p.thumb}" alt="Aperçu — ${p.title}" loading="lazy"/>` : ''}</div>
+      <h3>${p.title}</h3>
+      <p>${p.desc}</p>
+      <div class="meta">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>
+      <span class="go">Ouvrir le projet →</span>
+    `;
+    return el;
+  }
+
+  function render(){
+    renderChips();
+    const items = projects.filter(matches);
+    grid.innerHTML = '';
+    if(!items.length){
+      const empty = document.createElement('p');
+      empty.style.color = 'var(--muted)';
+      empty.textContent = 'Aucun projet ne correspond – essaie un autre mot-clé ou tag.';
+      grid.appendChild(empty);
+      return;
+    }
+    items.forEach((p,i)=> grid.appendChild(card(p,i)));
+  }
+
+  q.addEventListener('input', (e)=>{ state.query = e.target.value.trim().toLowerCase(); render(); });
+
+  render();
+  </script></body>
+</html>
