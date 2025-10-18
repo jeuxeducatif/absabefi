@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jeuxeducatif.github.io/Menu-principale-/</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2025-10-18</lastmod>
   </url>
-
-  <!-- Si tu ajoutes d'autres pages, liste-les ici -->
-  <!-- Exemple :
   <url>
-    <loc>https://jeuxeducatif.github.io/Menu-principale-/page2.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://jeuxeducatif.github.io/Menu-principale-/images-chat.html</loc>
+    <lastmod>2025-10-18</lastmod>
   </url>
-  -->
+  <url>
+    <loc>https://jeuxeducatif.github.io/Menu-principale-/boules-v2.html</loc>
+    <lastmod>2025-10-18</lastmod>
+  </url>
 </urlset>
