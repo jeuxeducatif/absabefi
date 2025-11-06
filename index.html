@@ -3,21 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mes projets — Menu</title>
-  <meta name="description" content="Menu centralisé de mes mini-projets (maths, physique, jeux, outils) publiés sur GitHub Pages." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Ccircle cx='64' cy='64' r='60' fill='%230b0f14'/%3E%3Cpath d='M32 68l20 20 44-44' stroke='%2371dca0' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-  <meta property="og:title" content="Mes projets — Menu" />
-  <meta property="og:description" content="Menu centralisé de mes mini-projets (maths, physique, jeux, outils)." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://absabefi-cell.github.io/" />
+
+  <!-- SEO: titre + description axés requêtes -->
+  <title>Jeux éducatifs gratuits (maths, physique, astronomie) — Menu</title>
+  <meta name="description" content="Menu centralisé de mini-projets interactifs et jeux éducatifs gratuits : mathématiques, physique, astronomie, logique, programmation. Apprendre en s’amusant." />
+
+  <!-- Canonique + Open Graph cohérents avec l’URL réelle -->
+  <link rel="canonical" href="https://jeuxeducatif.github.io/Menu-principale/">
+  <meta property="og:title" content="Jeux éducatifs gratuits — Menu des projets">
+  <meta property="og:description" content="Explore des jeux et mini-outils éducatifs en maths, physique, astronomie, logique et code.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jeuxeducatif.github.io/Menu-principale/">
   <meta name="theme-color" content="#0b0f14" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Ccircle cx='64' cy='64' r='60' fill='%230b0f14'/%3E%3Cpath d='M32 68l20 20 44-44' stroke='%2371dca0' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
   <style>
     :root{
       --bg:#0b0f14;--panel:#111726;--ink:#eef5ff;--muted:#9bb0c7;--accent:#50a8ff;--accent2:#71dca0;--card:#0f1422;--ring:#1f2a3a;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif}
     a{color:inherit;text-decoration:none}
     .wrap{max-width:1100px;margin:0 auto;padding:24px}
     header{position:sticky;top:0;z-index:5;background:linear-gradient(180deg, rgba(11,15,20,.95), rgba(11,15,20,.75));backdrop-filter:blur(8px);border-bottom:1px solid var(--ring)}
@@ -45,23 +53,43 @@
     footer{border-top:1px solid var(--ring);opacity:.9}
     .foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;padding:16px 0;color:var(--muted);font-size:13px}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    /* Texte SEO section */
+    .seo {padding:24px;max-width:900px;margin:40px auto 8px;color:#cfd8e3;font-size:17px;line-height:1.6}
+    .seo h2 {color:#fff;margin:0 0 8px}
   </style>
+
+  <!-- JSON-LD: WebSite + SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "JeuxEducatif — Menu des projets",
+    "url": "https://jeuxeducatif.github.io/Menu-principale/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://jeuxeducatif.github.io/Menu-principale/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: ItemList des projets -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Portfolio de mini-projets",
+    "name": "Projets interactifs",
     "itemListElement": [
-      {"@type":"SiteNavigationElement","position":1,"name":"Horloge maison","url":"https://absabefi-cell.github.io/Horloge-maison/"},
-      {"@type":"SiteNavigationElement","position":2,"name":"Portance aile","url":"https://absabefi-cell.github.io/Portance-aile-/"},
-      {"@type":"SiteNavigationElement","position":3,"name":"Traceur courbe 3D","url":"https://absabefi-cell.github.io/Traceur-courbe-3D/"},
-      {"@type":"SiteNavigationElement","position":4,"name":"INTEGRALE","url":"https://absabefi-cell.github.io/INTEGRALE/"},
-      {"@type":"SiteNavigationElement","position":5,"name":"Simulateur de choc","url":"https://absabefi-cell.github.io/Simulateur-de-choc/"},
-      {"@type":"SiteNavigationElement","position":6,"name":"Calculatrice en ligne","url":"https://absabefi-cell.github.io/Calculatrice-en-ligne/"},
-      {"@type":"SiteNavigationElement","position":7,"name":"Terre–Lune–Soleil (marées)","url":"https://absabefi-cell.github.io/Terre-lune-soleil-marres/"},
-      {"@type":"SiteNavigationElement","position":8,"name":"Jeux animaux","url":"https://absabefi-cell.github.io/Jeux-animeaux/"},
-      {"@type":"SiteNavigationElement","position":9,"name":"Puzzle pour enfant","url":"https://absabefi-cell.github.io/Puzzle-pour-enfant/"},
-      {"@type":"SiteNavigationElement","position":10,"name":"Jeux de boules v2","url":"https://absabefi-cell.github.io/Jeuxboulesv2/"}
+      { "@type": "ListItem", "position": 1, "url": "https://absabefi-cell.github.io/Horloge-maison/" },
+      { "@type": "ListItem", "position": 2, "url": "https://absabefi-cell.github.io/Portance-aile-/" },
+      { "@type": "ListItem", "position": 3, "url": "https://absabefi-cell.github.io/Traceur-courbe-3D/" },
+      { "@type": "ListItem", "position": 4, "url": "https://absabefi-cell.github.io/INTEGRALE/" },
+      { "@type": "ListItem", "position": 5, "url": "https://absabefi-cell.github.io/Simulateur-de-choc/" },
+      { "@type": "ListItem", "position": 6, "url": "https://absabefi-cell.github.io/Calculatrice-en-ligne/" },
+      { "@type": "ListItem", "position": 7, "url": "https://absabefi-cell.github.io/Terre-lune-soleil-marres/" },
+      { "@type": "ListItem", "position": 8, "url": "https://absabefi-cell.github.io/Jeux-animeaux/" },
+      { "@type": "ListItem", "position": 9, "url": "https://absabefi-cell.github.io/Puzzle-pour-enfant/" },
+      { "@type": "ListItem", "position": 10, "url": "https://absabefi-cell.github.io/Jeuxboulesv2/" }
     ]
   }
   </script>
@@ -70,7 +98,7 @@
   <header>
     <div class="wrap bar">
       <div class="title">🚀 Mes projets</div>
-      <form class="search" role="search" onsubmit="event.preventDefault()">
+      <form class="search" role="search" aria-label="Recherche de projets" onsubmit="event.preventDefault()">
         <span aria-hidden="true">🔎</span>
         <label for="q" class="sr-only">Rechercher</label>
         <input id="q" name="q" placeholder="Rechercher un projet (ex: jeux, maths, physique)" autocomplete="off" />
@@ -79,15 +107,28 @@
     <div class="wrap">
       <div class="chips" id="chips"></div>
     </div>
-  </header>  <main class="wrap">
+  </header>
+
+  <main class="wrap">
     <section class="grid" id="grid" aria-live="polite"></section>
-  </main>  <footer>
+  </main>
+
+  <footer>
     <div class="wrap foot">
       <span>© <span id="y"></span> — absabefi-cell</span>
-      <span>Astuce: tape un mot-clé (ex. « jeux ») pour filtrer.</span>
+      <span>Astuce : tape un mot-clé (ex. « jeux ») pour filtrer.</span>
     </div>
-  </footer>  <script>
-  // --- util: fabrique de vignettes SVG data:uri (emoji + couleur) ---
+  </footer>
+
+  <!-- Section texte SEO lisible par Google (ne change pas le design) -->
+  <section class="seo">
+    <h2>Jeux éducatifs gratuits — apprendre en s’amusant</h2>
+    <p>Ce site rassemble des mini-projets et jeux éducatifs gratuits pour explorer les mathématiques, la physique, l’astronomie, la logique et la programmation. Chaque outil est interactif, pensé pour les élèves, étudiants, parents et enseignants qui veulent comprendre visuellement les concepts scolaires.</p>
+    <p>Exemples : horloge plein écran avec sonnerie, simulateur de portance d’aile, traceur de courbes 3D, intégrale avec rectangles de Riemann, collisions élastiques, calculatrice, schéma Terre-Lune-Soleil (marées), puzzles pour enfants, etc.</p>
+  </section>
+
+  <script>
+  // --- util: vignette SVG data:uri (emoji + couleur) ---
   function svgThumb(emoji, bg){
     const svg = encodeURIComponent(`<?xml version='1.0' encoding='UTF-8'?>\n<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='675' viewBox='0 0 1200 675'>\n  <defs>\n    <linearGradient id='g' x1='0' x2='1' y1='0' y2='1'>\n      <stop offset='0' stop-color='${bg}'/>\n      <stop offset='1' stop-color='#0b0f14'/>\n    </linearGradient>\n  </defs>\n  <rect width='1200' height='675' fill='url(#g)'/>\n  <text x='50%' y='52%' font-size='300' text-anchor='middle' dominant-baseline='middle'>${emoji}</text>\n</svg>`);
     return `data:image/svg+xml;charset=utf-8,${svg}`;
@@ -146,7 +187,7 @@
     el.rel = 'noopener';
     el.innerHTML = `
       <div class="badge">#${i+1}</div>
-      <div class="thumb">${p.thumb ? `<img src="${p.thumb}" alt="Aperçu — ${p.title}" loading="lazy"/>` : ''}</div>
+      <div class="thumb"><img src="${p.thumb}" alt="Aperçu — ${p.title}" loading="lazy"></div>
       <h3>${p.title}</h3>
       <p>${p.desc}</p>
       <div class="meta">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>
@@ -162,7 +203,7 @@
     if(!items.length){
       const empty = document.createElement('p');
       empty.style.color = 'var(--muted)';
-      empty.textContent = 'Aucun projet ne correspond – essaie un autre mot-clé ou tag.';
+      empty.textContent = 'Aucun projet ne correspond — essaie un autre mot-clé ou tag.';
       grid.appendChild(empty);
       return;
     }
@@ -172,5 +213,6 @@
   q.addEventListener('input', (e)=>{ state.query = e.target.value.trim().toLowerCase(); render(); });
 
   render();
-  </script></body>
+  </script>
+</body>
 </html>
