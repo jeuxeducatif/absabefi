@@ -216,21 +216,16 @@
   </script>
 </body>
 
-<a href="menu.html" class="btn">⟵ Retour au menu</a>
 
-<style>
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #3498db;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-family: Arial;
+
+<button onclick="closeApp()" style="color:red; font-weight:bold;">
+    Fermer
+</button>
+
+<script>
+function closeApp() {
+    window.open('', '_self').close();
 }
-.btn:hover {
-    background: #2980b9;
-}
-</style>
+</script>
   
 </html>
